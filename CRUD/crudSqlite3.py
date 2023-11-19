@@ -53,7 +53,7 @@ def main():
 
     # Create task table if it does not exist
     conn.execute('''
-        CREATE TABLE IF IT DOES NOT EXIST tasks (
+        CREATE TABLE IF NOT EXISTS tasks (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT NOT NULL,
             description TEXT
