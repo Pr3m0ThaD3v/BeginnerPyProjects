@@ -10,7 +10,7 @@ def analyze_log(log_file_path):
             log_lines = log_file.readlines()
 
             # Define a regular expression pattern for extracting log levels
-            log_level_pattern = re.compile(r'\[([A-Za-z]+)\]')
+            log_level_pattern = re.compile(r'\[([A-Za-z]+)]')
 
             # Dictionary to store log level counts
             log_level_counts = {}
@@ -30,12 +30,10 @@ def analyze_log(log_file_path):
                 for level, count in log_level_counts.items():
                     print(f"{level}: {count}")
 
-
     except FileNotFoundError:
         print(f"Error: File '{log_file_path}' not found.")
     except Exception as e:
         print(f"Error analyzing log file: {e}")
-
 
 # Run with admin
 # C:\Windows\System32\winevt\Logs\Application.evtx
